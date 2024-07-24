@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'Impact';
+  src: url('./impact.ttf') format('truetype'); /* Replace with the correct path and file format */
+}
+
+.workContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.canvasWrap {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+}
+.canvasBody {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+}
+
+.canvasStage canvas {
+  background-color: rgba(255, 255, 255, 0) !important;
+  box-shadow: 0 2px 8px rgb(14 19 24 / 7%);
+}
+
+/* responsive */
+@media screen and (max-width: 1024px) {
+  .workContainer {
+    flex-direction: column-reverse;
+  }
+  .canvas-buttons button{
+    padding: 7px 10px !important;
+    border-radius: 3px !important;
+    font-size: 11px !important;
+    
+  }
+}
+
+.tool-icon-img {
+  width: 100% !important;
+ 
+  height: 100% !important;
+}
+
+.hair-img {
+  filter: brightness(0) invert(1);
+}
+
+.canvas-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.canvas-buttons button{
+
+  border-radius: 8px;
+  color: #fcfc52;
+  background-color: #000000;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  padding: 10px 20px;
+  transition: background-color .15s ease-in-out;
+  cursor: pointer;
+  border: none;
+  
+}
+
+.canvas-buttons button:hover {
+  background-color: #000000ba;
+}
